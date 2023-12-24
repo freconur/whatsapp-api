@@ -4,7 +4,13 @@ const { Client, LocalAuth } = require('whatsapp-web.js')
 const qrcode = require('qrcode-terminal')
 
 const whatsappClient = new Client({
-  authStrategy: new LocalAuth()
+  puppeteer: {
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox'
+    ],
+    authStrategy: new LocalAuth() // what ever authStrategy you are using
+  },
 })
 
 whatsappClient.on("qr", (qr) => qrcode.generate(qr, { small: true }))
