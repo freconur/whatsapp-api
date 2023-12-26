@@ -1,5 +1,5 @@
 const express = require('express')
-// const serverless = require('serverless-http')
+const serverless = require('serverless-http')
 const cors = require('cors')
 const messageRouter = require('./routers/messageRouter')
 const whatsappClient = require('./services/WhatsappClient')
@@ -18,9 +18,9 @@ const app = express()
 //   }
 // }
 // app.use(cors(options))
-// app.use(cors())
+app.use(cors())
 app.use(express.json())
 app.use(messageRouter)
 app.listen(process.env.PORT || 3000)
 // app.listen(3000, () => () => console.log(`Server is ready in on port ${process.env.PORT}`))
-// module.exports.handler =  serverless(app)
+module.exports.handler =  serverless(app)
