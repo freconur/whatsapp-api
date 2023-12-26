@@ -13,15 +13,6 @@ const whatsappClient =
       authStrategy: new LocalAuth() // what ever authStrategy you are using
     },
   });
-// ...,
-// puppeteer: {
-//   args: [
-//     '--no-sandbox',
-//     '--disable-setuid-sandbox'
-//   ],
-//   // authStrategy: new LocalAuth() // what ever authStrategy you are using
-// },
-
 
 whatsappClient.on("qr", (qr) => qrcode.generate(qr, { small: true }))
 whatsappClient.on("ready", () => console.log("client is ready"))
