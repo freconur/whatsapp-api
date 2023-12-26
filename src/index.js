@@ -4,7 +4,7 @@ const messageRouter = require('./routers/messageRouter')
 const whatsappClient = require('./services/WhatsappClient')
 whatsappClient.initialize()
 const whitelist = [
-  "http://localhost:3001", "http://localhost:3000","http://whatsapp-api-attendance.up.railway.app"
+  "http://localhost:3001", "http://localhost:3000"
 ]
 
 const app = express()
