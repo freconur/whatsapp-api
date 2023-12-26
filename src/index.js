@@ -10,7 +10,7 @@ const whitelist = [
 const app = express()
 app.use(express.json())
 // app.use(cors({origin:whitelist}))
-app.use(cors({origin:whitelist}))
+app.use(cors())
 app.use(messageRouter)
 app.listen(process.env.PORT || 3000)
 // app.listen(3000, () => () => console.log(`Server is ready in on port ${process.env.PORT}`))
