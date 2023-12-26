@@ -6,6 +6,7 @@ const qrcode = require('qrcode-terminal')
 const whatsappClient =
   new Client({
     puppeteer: {
+      headless:true,
       args: [
         '--no-sandbox',
         '--disable-setuid-sandbox'
