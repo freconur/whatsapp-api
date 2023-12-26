@@ -6,7 +6,7 @@ const whatsappClient = require('../services/WhatsappClient')
 router.get('/',(req, res) => {
   res.send('holis')
 })
-router.post('/message',cors(), (req, res) => {
+router.post('/message', (req, res) => {
   // res.header('Access-Control-Allow-Origin','https://attendance-system-blond.vercel.app')
   whatsappClient.sendMessage(req.body.phoneNumber, req.body.message)
   res.send()
