@@ -7,18 +7,18 @@ whatsappClient.initialize()
 
 const app = express()
 
-const whitelist = ['http://localhost:3001', 'http://localhost:3000', 'https://attendance-system-blond.vercel.app']
-const options = {
-  origin: (origin, callback) => {
-    if (whitelist.includes(origin) || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error('no permitido'));
-    }
-  }
-}
-app.use(cors(options))
-// app.use(cors())
+// const whitelist = ['http://localhost:3001', 'http://localhost:3000', 'https://attendance-system-blond.vercel.app']
+// const options = {
+//   origin: (origin, callback) => {
+//     if (whitelist.includes(origin) || !origin) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error('no permitido'));
+//     }
+//   }
+// }
+// app.use(cors(options))
+app.use(cors())
 app.use(express.json())
 app.use(messageRouter)
 app.listen(process.env.PORT || 3000)
