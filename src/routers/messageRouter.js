@@ -50,7 +50,9 @@ const client = new Client(
 //   res.sendField('./qrimage.html', { root: __dirname })
 //   // const rta =  qrcode.generate(qr, { small: true })
 // })
-
+router.get('/',(req, res) => {
+  res.send('holis')
+})
 router.post('/message', (req, res) => {
   whatsappClient.sendMessage(req.body.phoneNumber, req.body.message)
   res.send()
