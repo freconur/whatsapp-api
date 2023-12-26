@@ -6,6 +6,7 @@ router.get('/',(req, res) => {
   res.send('holis')
 })
 router.post('/message', (req, res) => {
+  res.header('Access-Control-Allow-Origin','*')
   whatsappClient.sendMessage(req.body.phoneNumber, req.body.message)
   res.send()
 })
