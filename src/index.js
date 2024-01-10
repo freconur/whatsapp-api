@@ -17,8 +17,8 @@ const app = express()
 //     }
 //   }
 // }
-app.use(cors(options))
-// app.use(cors())
+// app.use(cors(options))
+app.use(cors())
 app.use(express.json())
 app.use(messageRouter)
 app.listen(process.env.PORT || 3000)
