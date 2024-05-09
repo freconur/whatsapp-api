@@ -1,5 +1,5 @@
 const { Client, LocalAuth } = require('whatsapp-web.js')
-
+const chromium = require('@sparticuz/chromium')
 
 const qrcode = require('qrcode-terminal')
 
@@ -8,10 +8,12 @@ const whatsappClient =
     authStrategy: new LocalAuth(), // what ever authStrategy you are using,
     puppeteer: {
       headless:true,
-      args: [
-        '--no-sandbox',
-        '--disable-setuid-sandbox'
-      ],
+      // args: [
+      //   '--no-sandbox',
+      //   '--disable-setuid-sandbox'
+      // ],
+      args:chromium.args,
+      executablePath: "/usr/bin/chromium-browser"
     }
   });
 
