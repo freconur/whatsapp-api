@@ -1,6 +1,6 @@
 # Dependencies
 node_modules/
-package-lock.json
+# package-lock.json debe estar incluido para npm ci
 
 # WhatsApp Web.js (se recreará en el contenedor)
 .wwebjs_auth/

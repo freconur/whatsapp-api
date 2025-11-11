@@ -49,7 +49,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Instalar dependencias de npm (Puppeteer viene como dependencia de whatsapp-web.js)
-RUN npm ci --only=production
+RUN npm ci --omit=dev
 
 # Copiar el resto del código
 COPY . .
