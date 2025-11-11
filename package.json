@@ -1,24 +1,28 @@
 {
   "name": "whatsapp-api-rest",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "2.0.0",
+  "description": "API REST para enviar mensajes de WhatsApp usando whatsapp-web.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"
   },
+  "keywords": [
+    "whatsapp",
+    "api",
+    "rest",
+    "messaging"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@sparticuz/chromium": "^123.0.1",
     "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "nodemon": "^3.0.2",
-    "puppeteer": "^21.6.1",
-    "qrcode": "^1.5.3",
+    "express": "^4.21.2",
+    "qrcode": "^1.5.4",
     "qrcode-terminal": "^0.12.0",
-    "serverless-http": "^3.2.0",
-    "whatsapp-web.js": "^1.23.0"
+    "whatsapp-web.js": "^1.25.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
   }
 }
